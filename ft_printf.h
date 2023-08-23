@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
 
 int ft_putchar(int c);
 int ft_putstr(char *s);
