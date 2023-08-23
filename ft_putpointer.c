@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "main.h"
 
 /**
  * ft_putpointer - Writes a pointer address to the standard output (stdout)

@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "main.h"
 
 /**
  * ft_putnbr - Writes an integer to the standard output (stdout)

@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "main.h"
 
 /**
  * ft_puthexa - Writes an unsigned integer as hexadecimal to the standard output (stdout)

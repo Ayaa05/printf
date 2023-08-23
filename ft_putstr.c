@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "main.h"
 
 /**
  * ft_putstr - Writes a string to the standard output (stdout)
