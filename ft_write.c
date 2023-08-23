@@ -1,43 +1,40 @@
 #include "main.h"
 
+/**
+ * ft_write - Writes formatted data to the standard output (stdout)
+ * @vlist: The variable argument list
+ * @c: The format specifier
+ *
+ * Return: The number of characters written.
+ */
 int ft_write(va_list vlist, char c)
 {
-    int written_chars = 0;
+	int count;
 
-    switch (c)
-    {
-        case '%':
-            written_chars += ft_putchar('%');
-            break;
-        case 'c':
-            written_chars += ft_putchar(va_arg(vlist, int));
-            break;
-        case 's':
-            written_chars += ft_putstr(va_arg(vlist, const char *));
-            break;
-        case 'd':
-        case 'i':
-            written_chars += ft_putnbr(va_arg(vlist, int));
-            break;
-        case 'X':
-        case 'x':
-            written_chars += ft_puthexa(va_arg(vlist, unsigned int), c);
-            break;
-        case 'u':
-            written_chars += ft_putnbrnonsign(va_arg(vlist, unsigned int));
-            break;
-        case 'p':
-            written_chars += ft_putstr("0x");
-            written_chars += ft_putpointer(va_arg(vlist, unsigned long));
-            break;
-        case 'r':
-            written_chars += ft_putstr(va_arg(vlist, const char *));
-            break;
-        default:
-            written_chars += ft_putchar('%');
-            written_chars += ft_putchar(c);
-    }
-
-    return written_chars;
+	count = 0;
+	if (c == '%')
+		count += ft_putchar(c);
+	else if (c == 'c')
+		count += ft_putchar((int)va_arg(vlist, int));
+	else if (c == 's')
+		count += ft_putstr((char *)va_arg(vlist, char *));
+	else if (c == 'd' || c == 'i')
+		count += ft_putnbr((int)va_arg(vlist, int));
+	else if (c == 'X' || c == 'x')
+		count += ft_puthexa((unsigned int)va_arg(vlist, unsigned int), c);
+	else if (c == 'u')
+		count += ft_putnbrnonsign((unsigned int)va_arg(vlist, unsigned int));
+	else if (c == 'p')
+	{
+		count += ft_putstr("0x");
+		count += ft_putpointer((unsigned long)va_arg(vlist, unsigned long));
+	}
+	 else if (c == 'r')
+		count += ft_putstr(va_arg(vlist, char *));
+	else
+	{
+		ft_putchar('%');
+		ft_putchar(c);
+	}
+	return (count);
 }
-
