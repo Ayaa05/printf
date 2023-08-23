@@ -1,21 +1,26 @@
 #include "main.h"
-#include <stddef.h>
 
-/**
- * _printf - Prints formatted output to the standard output (stdout)
- * @format: The format string
- * @...: The variable arguments
- *
- * Return: The number of characters printed.
- */
-int _printf(const char *format, ...)
+int	ft_write(va_list vlist, char c)
 {
-	int count;
-	int i;
-	va_list vlist;
+	int	count;
 
-	if (format == NULL || (*format == '%' && *(format + 1) == '\0'))
-		return (-1);
+	count = 0;
+	if (c == '%')
+		count += ft_putchar(c);
+	else if (c == 'c')
+		count += ft_putchar((int)va_arg(vlist, int));
+	else if (c == 's')
+		count += ft_putstr((char *)va_arg(vlist, char *));
+	else if (c == 'd' || c == 'i')
+		count += ft_putnbr((int)va_arg(vlist, int));
+	return (count);
+}
+
+int	_printf(const char *format, ...)
+{
+	int		count;
+	int		i;
+	va_list	vlist;
 
 	va_start(vlist, format);
 	count = 0;
@@ -36,3 +41,4 @@ int _printf(const char *format, ...)
 	va_end(vlist);
 	return (count);
 }
+
