@@ -18,8 +18,8 @@ int ft_write(va_list vlist, char c)
 
 int _printf(const char *format, ...)
 {
-	int		count;
-	int		i;
+	int count;
+	int i;
 	va_list	vlist;
 
 	va_start(vlist, format);
