@@ -5,7 +5,7 @@ int ft_putchar(int c)
 	return (write(1, &c, 1));
 }
 
-int	ft_putstr(char *s)
+int ft_putstr(char *s)
 {
 	int	i;
 	int	count;
