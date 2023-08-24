@@ -16,7 +16,7 @@ int ft_write(va_list vlist, char c)
 	return (count);
 }
 
-int	_printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int		count;
 	int		i;
