@@ -1,22 +1,9 @@
 #include "main.h"
 
-/**
- * ft_putchar - Writes a single character to the standard output.
- * @c: The character to be written.
- * Return: On success, returns 1. On error, -1 is returned.
- */
-
 int ft_putchar(int c)
 {
 	return (write(1, &c, 1));
 }
-
-/**
- * ft_putstr - Writes a string to the standard output.
- * @s: The string to be written.
- * Return: The total count of characters written.
- */
-
 int ft_putstr(char *s)
 {
 	int i;
@@ -33,12 +20,6 @@ int ft_putstr(char *s)
 	}
 	return (count);
 }
-
-/**
- * ft_putnbr - Writes an integer to the standard output.
- * @n: The integer to be written.
- * Return: The total count of characters written.
- */
 
 int ft_putnbr(int n)
 {

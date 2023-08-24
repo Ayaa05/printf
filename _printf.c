@@ -1,11 +1,5 @@
 #include "main.h"
 
-/**
- * ft_write - Handles the formatting and writing of different specifiers.
- * @vlist: The variable argument list.
- * @c: The specifier character.
- * Return: The count of characters written.
- */
 int ft_write(va_list vlist, char c)
 {
 	int count;
