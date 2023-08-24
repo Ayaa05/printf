@@ -1,8 +1,8 @@
 #include "main.h"
 
-int	ft_write(va_list vlist, char c)
+int ft_write(va_list vlist, char c)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	if (c == '%')
