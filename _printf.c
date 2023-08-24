@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * ft_write - Handles the formatting and writing of different specifiers.
  * @vlist: The variable argument list.
