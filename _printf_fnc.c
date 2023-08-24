@@ -1,13 +1,14 @@
 #include "main.h"
 
-int ft_putchar(int c)
+int	ft_putchar(int c)
 {
 	return (write(1, &c, 1));
 }
-int ft_putstr(char *s)
+
+int	ft_putstr(char *s)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -21,10 +22,10 @@ int ft_putstr(char *s)
 	return (count);
 }
 
-int ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
-	long nombre;
-	int count;
+	long	nombre;
+	int		count;
 
 	count = 0;
 	nombre = n;
