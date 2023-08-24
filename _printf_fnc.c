@@ -22,7 +22,7 @@ int ft_putstr(char *s)
 	return (count);
 }
 
-int	ft_putnbr(int n)
+int ft_putnbr(int n)
 {
 	long	nombre;
 	int		count;
