@@ -7,7 +7,7 @@ int ft_putchar(int c)
 
 int ft_putstr(char *s)
 {
-	int	i;
+	int i;
 	int	count;
 
 	i = 0;
