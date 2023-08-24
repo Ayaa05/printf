@@ -4,7 +4,6 @@
  * ft_write - Handles the formatting and writing of different specifiers.
  * @vlist: The variable argument list.
  * @c: The specifier character.
- *
  * Return: The count of characters written.
  */
 int ft_write(va_list vlist, char c)
@@ -23,17 +22,10 @@ int ft_write(va_list vlist, char c)
 	return (count);
 }
 
-/**
- * _printf - Prints formatted output according to the format string.
- * @format: The format string.
- * @...: Variable number of arguments.
- *
- * Return: The total count of characters written.
- */
 int printf(const char *format, ...)
 {
-	int		count;
-	int		i;
+	int count;
+	int i;
 	va_list	vlist;
 
 	va_start(vlist, format);
