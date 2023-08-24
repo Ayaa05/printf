@@ -16,7 +16,7 @@ int	ft_putchar(int c)
  * Return: The total count of characters written.
  */
 
-int	ft_putstr(char *s)
+int ft_putstr(char *s)
 {
 	int	i;
 	int	count;
@@ -33,7 +33,13 @@ int	ft_putstr(char *s)
 	return (count);
 }
 
-int	ft_putnbr(int n)
+/**
+ * ft_putnbr - Writes an integer to the standard output.
+ * @n: The integer to be written.
+ *
+ * Return: The total count of characters written.
+ */
+int ft_putnbr(int n)
 {
 	long	nombre;
 	int		count;
