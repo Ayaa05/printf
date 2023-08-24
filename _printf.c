@@ -21,7 +21,13 @@ int ft_write(va_list vlist, char c)
 		count += ft_putnbr((int)va_arg(vlist, int));
 	return (count);
 }
-
+/**
+ * _printf - Prints formatted output according to the format string.
+ * @format: The format string.
+ * @...: Variable number of arguments.
+ *
+ * Return: The total count of characters written.
+ */
 int printf(const char *format, ...)
 {
 	int		count;
