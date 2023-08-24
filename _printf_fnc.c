@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * ft_putchar - Writes a single character to the standard output.
+ * @c: The character to be written.
+ *
+ * Return: On success, returns 1. On error, -1 is returned.
+ */
 int	ft_putchar(int c)
 {
 	return (write(1, &c, 1));
